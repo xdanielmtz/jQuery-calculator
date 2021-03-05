@@ -74,10 +74,16 @@
   </div>
 
 <script type="text/javascript">
+
 $(document).ready(function() {   
 var numberButtons = $(".number"); //targets my number buttons
 var operatorButtons = $(".operator"); //targets my operator buttons
 var equalButton = $(".equal"); //targets my equal button
+
+var firstNumber;
+var secondNumber;
+var operator;
+var equalButton;
  
 //event listener on the buttons
 numberButtons.on("click", function () {
@@ -90,6 +96,12 @@ operatorButtons.on("click", function () {
 
 })
 
+equalButton.on("click", function () {
+
+})
+
+
+
 
 
 
@@ -98,6 +110,13 @@ operatorButtons.on("click", function () {
 
 
 </script>
+
+
+
+
+
+
+
 
 
 
