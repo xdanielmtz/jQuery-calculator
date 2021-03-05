@@ -79,6 +79,7 @@ $(document).ready(function() {
 var numberButtons = $(".number"); //targets my number buttons
 var operatorButtons = $(".operator"); //targets my operator buttons
 var equalSign = $(".equal"); //targets my equal button
+var firstNumberEl = $("#first-number");
 
 var firstNumber = "";
 var secondNumber= "";
@@ -88,9 +89,10 @@ var equalButton="";
 //event listeners on the buttons
 numberButtons.on("click", function () {
   console.log($(this).val());
-  if(operator !== ""){
+  if(operator === ""){
     firstNumber = firstNumber + $(this).val();
     console.log(firstNumber)
+    firstNumberEl.text(firstNumber);
   }
 
 })
