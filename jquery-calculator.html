@@ -178,7 +178,7 @@
             firstNumber = firstNumber + $(this).val();
             console.log(firstNumber);
             firstNumberEl.text(firstNumber);
-          } else {
+          } else{
             //if it is not empty than that means our 2nd operator must exist
             secondNumber = secondNumber + $(this).val();
             secondNumberEl.text(secondNumber);
@@ -190,6 +190,17 @@
           operator = $(this).val();
           operatorEl.text(operator);
         });
+
+        $(".clear").on("click", function (){
+          firstNumber = "";
+          secondNumber = "";
+          operator = "";
+          result = "";
+          firstNumberEl.text(""),
+          secondNumberEl.text("");
+          operatorEl.text("");
+          resultEl.text("");
+        })
 
         equalSign.on("click", function () {
           switch (operator) {
