@@ -82,6 +82,7 @@ var equalSign = $(".equal"); //targets my equal button
 var firstNumberEl = $("#first-number");
 var secondNumberEl = $("#second-number");
 var operatorEl = $("#operator");
+var resultEl = $("#result");
 
 var firstNumber = "";
 var secondNumber= "";
@@ -109,6 +110,16 @@ operatorButtons.on("click", function () {
 })
 
 equalSign.on("click", function () {
+  switch(operator){
+    case "plus":
+      resultEl.text(parseInt(firstNumber) + parseInt(secondNumber));
+      break
+    
+
+
+  }
+
+
 
 })
 
