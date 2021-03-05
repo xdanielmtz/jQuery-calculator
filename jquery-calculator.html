@@ -78,25 +78,29 @@
 $(document).ready(function() {   
 var numberButtons = $(".number"); //targets my number buttons
 var operatorButtons = $(".operator"); //targets my operator buttons
-var equalButton = $(".equal"); //targets my equal button
+var equalSign = $(".equal"); //targets my equal button
 
-var firstNumber;
-var secondNumber;
-var operator;
-var equalButton;
+var firstNumber = "";
+var secondNumber= "";
+var operator="";
+var equalButton="";
  
-//event listener on the buttons
+//event listeners on the buttons
 numberButtons.on("click", function () {
   console.log($(this).val());
+  if(operator !== ""){
+    firstNumber = firstNumber + $(this).val();
+    console.log(firstNumber)
+  }
 
 })
 
 operatorButtons.on("click", function () {
   console.log($(this).val());
-
+  operator = $(this).val();
 })
 
-equalButton.on("click", function () {
+equalSign.on("click", function () {
 
 })
 
